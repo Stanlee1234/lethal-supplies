@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://d4hs2w8m5enwf"]
+
+[ext_resource type="Texture2D" uid="uid://cjajir6kf276c" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/1_Generic_Shadowless.png" id="1_178u6"]
+[ext_resource type="Texture2D" uid="uid://bhjp2fdo011ul" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/2_LivingRoom_Shadowless.png" id="2_crob7"]
+[ext_resource type="Texture2D" uid="uid://u66w4sx5ml7s" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="3_34gmn"]
+[ext_resource type="Texture2D" uid="uid://be5kngxnsnscb" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/4_Bedroom_Shadowless.png" id="4_jrifv"]
+[ext_resource type="Texture2D" uid="uid://cd4mh8nmjhg8b" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/5_Classroom_and_library_Shadowless.png" id="5_jesqa"]
+[ext_resource type="Texture2D" uid="uid://do8r34rwhqox" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/6_Music_and_sport_Shadowless.png" id="6_lm5ca"]
+[ext_resource type="Texture2D" uid="uid://dg5ydctwuopin" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/7_Art_Shadowless.png" id="7_t6qf1"]
+[ext_resource type="Texture2D" uid="uid://258t84vw76lv" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/8_Gym_Shadowless.png" id="8_nlnyh"]
+[ext_resource type="Texture2D" uid="uid://dredxc8rkak2a" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/9_Fishing_Shadowless.png" id="9_epqhr"]
+[ext_resource type="Texture2D" uid="uid://22aqumk8g0ni" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/10_Birthday_party_Shadowless.png" id="10_50p6p"]
+[ext_resource type="Texture2D" uid="uid://cg555g76io6vm" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/11_Halloween_Shadowless.png" id="11_x0u0g"]
+[ext_resource type="Texture2D" uid="uid://bnj7i02vqg4x8" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/12_Kitchen_Shadowless.png" id="12_tloy5"]
+[ext_resource type="Texture2D" uid="uid://6suy1b3h3a4s" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/13_Conference_Hall_Shadowless.png" id="13_wq1ua"]
+[ext_resource type="Texture2D" uid="uid://dsgudunih6qmx" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/14_Basement_Shadowless.png" id="14_hb5lt"]
+[ext_resource type="Texture2D" uid="uid://csrhfj7sjaspg" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/15_Christmas_Shadowless.png" id="15_ahiik"]
+[ext_resource type="Texture2D" uid="uid://b17elujbqywr8" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/16_Grocery_store_Shadowless.png" id="16_y7ugg"]
+[ext_resource type="Texture2D" uid="uid://b7mr12kg7x4rh" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/18_Jail_Shadowless.png" id="17_qcfiq"]
+[ext_resource type="Texture2D" uid="uid://dqcks8gfg1c38" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="18_otmhy"]
+[ext_resource type="Texture2D" uid="uid://bvl25rxbojb7h" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/20_Japanese_interiors_Shadowless.png" id="19_l6nw0"]
+[ext_resource type="Texture2D" uid="uid://cg3u7kww2cqvt" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/21_Clothing_Store_Shadowless.png" id="20_1rrkw"]
+[ext_resource type="Texture2D" uid="uid://bpw5v4nu6rwmy" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/22_Museum_Shadowless.png" id="21_j8yw7"]
+[ext_resource type="Texture2D" uid="uid://ddghmlhk8ybu1" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/23_Television_and_Film_Studio_Shadowless.png" id="22_4e0oh"]
+[ext_resource type="Texture2D" uid="uid://bf5vqnp3glxt6" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/24_Ice_Cream_Shop_Shadowless.png" id="23_hh03w"]
+[ext_resource type="Texture2D" uid="uid://c52f3pw0bam3c" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/25_Shooting_Range_Shadowless.png" id="24_t3lbw"]
+[ext_resource type="Texture2D" uid="uid://bffj854slkf10" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/26_Condominium_Shadowless.png" id="25_d4wlr"]
+
+[node name="AssetSheet" type="Node2D" unique_id=1001689389]
+
+[node name="1GenericShadowless" type="Sprite2D" parent="." unique_id=2001009502]
+position = Vector2(187, 665)
+texture = ExtResource("1_178u6")
+
+[node name="2LivingRoomShadowless" type="Sprite2D" parent="." unique_id=1516023665]
+position = Vector2(483, 409)
+texture = ExtResource("2_crob7")
+
+[node name="3BathroomShadowless" type="Sprite2D" parent="." unique_id=497959951]
+position = Vector2(792, 524)
+texture = ExtResource("3_34gmn")
+
+[node name="4BedroomShadowless" type="Sprite2D" parent="." unique_id=1346374434]
+position = Vector2(1098, 933)
+texture = ExtResource("4_jrifv")
+
+[node name="5ClassroomAndLibraryShadowless" type="Sprite2D" parent="." unique_id=256776996]
+position = Vector2(1399, 363)
+texture = ExtResource("5_jesqa")
+
+[node name="6MusicAndSportShadowless" type="Sprite2D" parent="." unique_id=2140683935]
+position = Vector2(1402, 1084)
+texture = ExtResource("6_lm5ca")
+
+[node name="7ArtShadowless" type="Sprite2D" parent="." unique_id=1261255444]
+position = Vector2(1401, 1555)
+texture = ExtResource("7_t6qf1")
+
+[node name="8GymShadowless" type="Sprite2D" parent="." unique_id=956942270]
+position = Vector2(1712, 354)
+texture = ExtResource("8_nlnyh")
+
+[node name="9FishingShadowless" type="Sprite2D" parent="." unique_id=605400949]
+position = Vector2(1710, 882)
+texture = ExtResource("9_epqhr")
+
+[node name="10BirthdayPartyShadowless" type="Sprite2D" parent="." unique_id=521305236]
+position = Vector2(1696, 1209)
+texture = ExtResource("10_50p6p")
+
+[node name="11HalloweenShadowless" type="Sprite2D" parent="." unique_id=1200864538]
+position = Vector2(2025, 579)
+texture = ExtResource("11_x0u0g")
+
+[node name="12KitchenShadowless" type="Sprite2D" parent="." unique_id=490714848]
+position = Vector2(2361, 508)
+texture = ExtResource("12_tloy5")
+
+[node name="13ConferenceHallShadowless" type="Sprite2D" parent="." unique_id=1880851404]
+position = Vector2(2375, 1051)
+texture = ExtResource("13_wq1ua")
+
+[node name="14BasementShadowless" type="Sprite2D" parent="." unique_id=1891937854]
+position = Vector2(2708, 526)
+texture = ExtResource("14_hb5lt")
+
+[node name="15ChristmasShadowless" type="Sprite2D" parent="." unique_id=1066407573]
+position = Vector2(2714, 1124)
+texture = ExtResource("15_ahiik")
+
+[node name="16GroceryStoreShadowless" type="Sprite2D" parent="." unique_id=467710493]
+position = Vector2(3013, 748)
+texture = ExtResource("16_y7ugg")
+
+[node name="18JailShadowless" type="Sprite2D" parent="." unique_id=1869771763]
+position = Vector2(3349, 487)
+texture = ExtResource("17_qcfiq")
+
+[node name="19HospitalShadowless" type="Sprite2D" parent="." unique_id=1226464315]
+position = Vector2(3694, 1003)
+texture = ExtResource("18_otmhy")
+
+[node name="20JapaneseInteriorsShadowless" type="Sprite2D" parent="." unique_id=1767529597]
+position = Vector2(4070, 395)
+texture = ExtResource("19_l6nw0")
+
+[node name="21ClothingStoreShadowless" type="Sprite2D" parent="." unique_id=2020916456]
+position = Vector2(4077, 1209)
+texture = ExtResource("20_1rrkw")
+
+[node name="22MuseumShadowless" type="Sprite2D" parent="." unique_id=1233141776]
+position = Vector2(4445, 1120)
+texture = ExtResource("21_j8yw7")
+
+[node name="23TelevisionAndFilmStudioShadowless" type="Sprite2D" parent="." unique_id=1253791875]
+position = Vector2(4809, 259)
+texture = ExtResource("22_4e0oh")
+
+[node name="24IceCreamShopShadowless" type="Sprite2D" parent="." unique_id=16053161]
+position = Vector2(4805, 569)
+texture = ExtResource("23_hh03w")
+
+[node name="25ShootingRangeShadowless" type="Sprite2D" parent="." unique_id=216871225]
+position = Vector2(4796, 834)
+texture = ExtResource("24_t3lbw")
+
+[node name="26CondominiumShadowless" type="Sprite2D" parent="." unique_id=1942610073]
+position = Vector2(4804, 1072)
+texture = ExtResource("25_d4wlr")
