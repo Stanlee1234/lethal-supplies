@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://ds24yxa0jynl"]
+
+[ext_resource type="Script" uid="uid://delp3asmirpvl" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://b4cb3848xynk3" path="res://assets/2_Characters/Character_Generator/0_Premade_Characters/16x16/Main Character.png" id="1_v0iea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(288, 41, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(304, 41, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(320, 41, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(336, 41, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(352, 41, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(368, 41, 16, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8vwt4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3smsa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soorf"]
+size = Vector2(8, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_soorf"]
+radius = 24.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1183679640]
+script = ExtResource("1_cvnsp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281358882]
+sprite_frames = SubResource("SpriteFrames_8vwt4")
+autoplay = "default"
+frame_progress = 0.56086403
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1729450135]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_soorf")
+
+[node name="HoldPoint" type="Marker2D" parent="." unique_id=1596924569]
+position = Vector2(16, 0)
+
+[node name="PickupZone" type="Area2D" parent="." unique_id=1928609557]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone" unique_id=713539809]
+shape = SubResource("CircleShape2D_soorf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1560579734]

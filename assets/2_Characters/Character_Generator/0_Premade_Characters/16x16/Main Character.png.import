@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boiovosl5bmuf"
-path="res://.godot/imported/Premade_Character_48x48_13.png-6f1379d0e6ca9a08ad75b9f813c4a80e.ctex"
+uid="uid://b4cb3848xynk3"
+path="res://.godot/imported/Main Character.png-1cbb08de07e65a6e4bdfd7b5646be182.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/2_Characters/Character_Generator/0_Premade_Characters/48x48/Premade_Character_48x48_13.png"
-dest_files=["res://.godot/imported/Premade_Character_48x48_13.png-6f1379d0e6ca9a08ad75b9f813c4a80e.ctex"]
+source_file="res://assets/2_Characters/Character_Generator/0_Premade_Characters/16x16/Main Character.png"
+dest_files=["res://.godot/imported/Main Character.png-1cbb08de07e65a6e4bdfd7b5646be182.ctex"]
 
 [params]
 

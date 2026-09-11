@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Lethal Supplies"
+run/main_scene="uid://bqahxs8llagpw"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bqahxs8llagpw"]
+
+[ext_resource type="Texture2D" uid="uid://cjajir6kf276c" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/1_Generic_Shadowless.png" id="1_3tvqv"]
+[ext_resource type="PackedScene" uid="uid://ds24yxa0jynl" path="res://Scenes/player.tscn" id="1_rx0dc"]
+[ext_resource type="PackedScene" uid="uid://dyxv2rxfj2tif" path="res://Scenes/throwable_prop.tscn" id="3_rx0dc"]
+
+[node name="TestRoom" type="Node2D" unique_id=2091404672]
+
+[node name="1GenericShadowless" type="Sprite2D" parent="." unique_id=1127320261]
+position = Vector2(3, 40)
+texture = ExtResource("1_3tvqv")
+
+[node name="Player" parent="." unique_id=1183679640 instance=ExtResource("1_rx0dc")]
+
+[node name="ThrowableProp" parent="." unique_id=184307987 instance=ExtResource("3_rx0dc")]
+position = Vector2(63, -40)

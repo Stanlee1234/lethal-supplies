@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dyxv2rxfj2tif"]
+
+[ext_resource type="Texture2D" uid="uid://cjajir6kf276c" path="res://assets/1_Interiors/16x16/Theme_Sorter_Shadowless/1_Generic_Shadowless.png" id="1_aka8a"]
+[ext_resource type="Script" uid="uid://c136rkoxwdgcb" path="res://Scripts/throwable_prop.gd" id="1_sayul"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sayul"]
+atlas = ExtResource("1_aka8a")
+region = Rect2(199, 632, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_soorf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sayul")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(11.5, 11.5)
+
+[node name="ThrowableProp" type="RigidBody2D" unique_id=184307987]
+linear_velocity = Vector2(10, 0)
+linear_damp = 4.0
+angular_damp = 3.0
+script = ExtResource("1_sayul")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206892338]
+sprite_frames = SubResource("SpriteFrames_soorf")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1936788002]
+position = Vector2(1.75, -0.75)
+shape = SubResource("RectangleShape2D_cvnsp")
