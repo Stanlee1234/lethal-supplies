@@ -20,4 +20,7 @@ frame_3/duration = 1.0
 script = ExtResource("1_kug5d")
 item_name = "Flag"
 texture = SubResource("AnimatedTexture_6idp7")
+collision_size = Vector2(8, 25)
+sprite_offset = Vector2(15, -3)
+collision_offset = Vector2(8, 2)
 metadata/_custom_type_script = "uid://skughv1fccfk"

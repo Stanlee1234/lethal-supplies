@@ -24,14 +24,16 @@ func _ready() -> void:
 func _apply_item_data() -> void:
 	if not item_data:
 		return
-		
+
 	if sprite:
 		sprite.texture = item_data.texture
-		
+		sprite.position = item_data.sprite_offset
+
 	if collision_shape:
 		var box := RectangleShape2D.new()
 		box.size = item_data.collision_size
 		collision_shape.shape = box
+		collision_shape.position = item_data.collision_offset
 
 func pick_up(holder: Node2D) -> void:
 	is_held = true

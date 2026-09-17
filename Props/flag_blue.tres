@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cdiqcg7u1amf2"]
+
+[ext_resource type="Script" uid="uid://skughv1fccfk" path="res://Scripts/item_data.gd" id="1_wvrxe"]
+[ext_resource type="Texture2D" uid="uid://10yw0hk7tnv6" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Flag/tile_0004.png" id="2_wvrxe"]
+[ext_resource type="Texture2D" uid="uid://d2v56nocmwoya" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Flag/tile_0005.png" id="3_rfopt"]
+[ext_resource type="Texture2D" uid="uid://c8fgeg65yqsce" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Flag/tile_0006.png" id="4_551lp"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_6idp7"]
+frames = 4
+speed_scale = 5.1
+frame_0/texture = ExtResource("2_wvrxe")
+frame_1/texture = ExtResource("3_rfopt")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_551lp")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("3_rfopt")
+frame_3/duration = 1.0
+
+[resource]
+script = ExtResource("1_wvrxe")
+item_name = "Flag"
+texture = SubResource("AnimatedTexture_6idp7")
+collision_size = Vector2(8, 25)
+sprite_offset = Vector2(15, -3)
+collision_offset = Vector2(8, 2)
+metadata/_custom_type_script = "uid://skughv1fccfk"

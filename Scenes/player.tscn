@@ -124,7 +124,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soorf"]
-size = Vector2(12, 25)
+size = Vector2(12, 9)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_soorf"]
 radius = 24.0
@@ -255,17 +255,13 @@ sources/0 = SubResource("TileSetAtlasSource_fkybt")
 [node name="Player" type="CharacterBody2D" unique_id=1183679640]
 collision_layer = 2
 script = ExtResource("1_cvnsp")
-speed = null
-throw_force = null
-dash_speed = null
-dash_duration = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281358882]
 sprite_frames = SubResource("SpriteFrames_8vwt4")
 animation = &"idle_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1729450135]
-position = Vector2(0, 2.5)
+position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_soorf")
 
 [node name="HoldPoint" type="Marker2D" parent="." unique_id=1596924569]

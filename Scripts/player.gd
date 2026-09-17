@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 130.0
+@export var speed: float = 130.0 #130.0
 @export var throw_force: float = 450.0
 
 # Dash tuning parameters
