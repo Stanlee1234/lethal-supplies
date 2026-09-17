@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed: float = 130.0 #130.0
 @export var throw_force: float = 450.0
 
-# Dash tuning parameters
 @export var dash_speed: float = 380.0
 @export var dash_duration: float = 0.2
 
@@ -15,7 +14,6 @@ extends CharacterBody2D
 var held_prop: ThrowableProp = null
 var facing_direction: String = "front"
 
-# Dash state variables
 var is_dashing: bool = false
 var dash_direction: Vector2 = Vector2.DOWN
 var last_input_vector: Vector2 = Vector2.DOWN
@@ -27,7 +25,6 @@ func _physics_process(_delta: float) -> void:
 		last_input_vector = input_vector.normalized()
 
 	if is_dashing:
-		# Lock velocity into the dash direction during the dash burst
 		velocity = dash_direction * dash_speed
 	else:
 		velocity = input_vector * speed
@@ -37,7 +34,6 @@ func _physics_process(_delta: float) -> void:
 	if not is_dashing:
 		update_animation(input_vector)
 
-	# Keep hold point pointing at cursor
 	var mouse_direction := (get_global_mouse_position() - global_position).normalized()
 	hold_point.position = (mouse_direction * 16.0).round()
 	hold_point.rotation = mouse_direction.angle()
@@ -61,9 +57,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			release_held_prop()
 		else:
 			attempt_pickup()
-	elif event.is_action_pressed("attack"):
-		print("Attack pressed. Held prop is: ", held_prop)
-		if held_prop:
+	elif event.is_action_pressed("attack") and held_prop:
 			throw_held_prop()
 		
 	if event.is_action_pressed("dash"):
@@ -73,15 +67,12 @@ func _unhandled_input(event: InputEvent) -> void:
 func perform_dash() -> void:
 	is_dashing = true
 	
-	# Dash towards movement direction; fallback to last faced direction if stationary
 	var current_input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	dash_direction = current_input.normalized() if current_input != Vector2.ZERO else last_input_vector
 
-	# Optional juice: flash white or tint while dashing
 	var original_modulate = sprite.modulate
-	sprite.modulate = Color(1.8, 1.8, 2.2, 0.8) # Slight blue-white glow
+	sprite.modulate = Color(1.8, 1.8, 2.2, 0.8)
 
-	# Handle dash duration using a scene tree timer
 	await get_tree().create_timer(dash_duration).timeout
 
 	sprite.modulate = original_modulate

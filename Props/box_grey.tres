@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://j8d4chcw2nb1"]
+
+[ext_resource type="Script" uid="uid://skughv1fccfk" path="res://Scripts/item_data.gd" id="1_jicek"]
+[ext_resource type="Texture2D" uid="uid://bl524qmrsh1rn" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Objects/tile_0004.png" id="2_1v73x"]
+
+[resource]
+script = ExtResource("1_jicek")
+item_name = "Box"
+texture = ExtResource("2_1v73x")
+weight_tier = 2.0
+metadata/_custom_type_script = "uid://skughv1fccfk"

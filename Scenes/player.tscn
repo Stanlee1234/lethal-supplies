@@ -92,7 +92,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -106,7 +106,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -120,11 +120,11 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk_side",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soorf"]
-size = Vector2(12, 9)
+size = Vector2(12, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_soorf"]
 radius = 24.0
@@ -258,10 +258,10 @@ script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281358882]
 sprite_frames = SubResource("SpriteFrames_8vwt4")
-animation = &"idle_side"
+animation = &"walk_back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1729450135]
-position = Vector2(0, 10.5)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_soorf")
 
 [node name="HoldPoint" type="Marker2D" parent="." unique_id=1596924569]
@@ -279,6 +279,7 @@ zoom = Vector2(3, 3)
 position_smoothing_speed = 7.0
 
 [node name="DashBarTileMapLayer" type="TileMapLayer" parent="." unique_id=1728466829]
+z_index = 1
 material = SubResource("ShaderMaterial_6t5aa")
 position = Vector2(8, 8)
 tile_map_data = PackedByteArray(0, 0, 244, 255, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 245, 255, 5, 0, 0, 0, 0, 0, 4, 0, 0, 0, 246, 255, 5, 0, 0, 0, 0, 0, 4, 0, 0, 0, 247, 255, 5, 0, 0, 0, 0, 0, 4, 0, 0, 0, 248, 255, 5, 0, 0, 0, 0, 0, 1, 0, 0, 0)

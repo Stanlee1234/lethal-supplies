@@ -4,6 +4,7 @@
 
 [node name="ThrowableProp" type="RigidBody2D" unique_id=184307987]
 collision_layer = 4
+collision_mask = 5
 freeze_mode = 1
 linear_velocity = Vector2(10, 0)
 linear_damp = 3.5
@@ -13,4 +14,3 @@ script = ExtResource("1_sayul")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1238286868]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1564251792]
-position = Vector2(-0.25, 0)
