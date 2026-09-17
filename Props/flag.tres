@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dt27rh7tbrnl2"]
+
+[ext_resource type="Script" uid="uid://skughv1fccfk" path="res://Scripts/item_data.gd" id="1_kug5d"]
+[ext_resource type="Texture2D" uid="uid://crep4fe704v2k" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Flag/tile_0001.png" id="2_d3bno"]
+[ext_resource type="Texture2D" uid="uid://cgw62e3ulrb4j" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Flag/tile_0002.png" id="3_wj1j2"]
+[ext_resource type="Texture2D" uid="uid://uul682k3ht8t" path="res://assets/Objects/Petixel_Tileset_-_Prototype_Flag/tile_0003.png" id="4_d0hla"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_6idp7"]
+frames = 4
+speed_scale = 5.1
+frame_0/texture = ExtResource("2_d3bno")
+frame_1/texture = ExtResource("3_wj1j2")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_d0hla")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("3_wj1j2")
+frame_3/duration = 1.0
+
+[resource]
+script = ExtResource("1_kug5d")
+item_name = "Flag"
+texture = SubResource("AnimatedTexture_6idp7")
+metadata/_custom_type_script = "uid://skughv1fccfk"

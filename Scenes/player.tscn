@@ -1,82 +1,306 @@
 [gd_scene format=3 uid="uid://ds24yxa0jynl"]
 
 [ext_resource type="Script" uid="uid://delp3asmirpvl" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://b4cb3848xynk3" path="res://assets/2_Characters/Character_Generator/0_Premade_Characters/16x16/Main Character.png" id="1_v0iea"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(288, 41, 16, 23)
+[ext_resource type="Texture2D" uid="uid://b8mor6c87yjwq" path="res://assets/!Prototype_Characters.png" id="2_cvnsp"]
+[ext_resource type="Shader" uid="uid://c6jdgs5ae2gtf" path="res://Scripts/player.gdshader" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://c0jcvru4ei424" path="res://assets/bar.png" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://hduohj0ptihh" path="res://Scripts/tile_map_layer.gd" id="5_fkybt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(304, 41, 16, 23)
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(320, 41, 16, 23)
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(336, 41, 16, 23)
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 64, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(352, 41, 16, 23)
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 96, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
-atlas = ExtResource("1_v0iea")
-region = Rect2(368, 41, 16, 23)
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(32, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+atlas = ExtResource("2_cvnsp")
+region = Rect2(32, 64, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8vwt4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cvnsp")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_6t5aa")
+}],
+"loop": 1,
+"name": &"idle_back",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vgqql")
+}],
+"loop": 1,
+"name": &"idle_front",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fkybt")
+}],
+"loop": 1,
+"name": &"idle_side",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x3wgy")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3smsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8erm5")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"walk_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ek2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}],
+"loop": 1,
+"name": &"walk_front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukyrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp3o")
+}],
+"loop": 1,
+"name": &"walk_side",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soorf"]
-size = Vector2(8, 6)
+size = Vector2(12, 25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_soorf"]
 radius = 24.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6t5aa"]
+shader = ExtResource("3_fkybt")
+shader_parameter/border_color = Color(0, 0, 0, 1)
+shader_parameter/border_width = 1.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fkybt"]
+texture = ExtResource("4_vgqql")
+0:0/animation_speed = 15.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
+0:0/0 = 0
+0:1/animation_speed = 15.0
+0:1/animation_frame_0/duration = 1.0
+0:1/animation_frame_1/duration = 1.0
+0:1/animation_frame_2/duration = 1.0
+0:1/animation_frame_3/duration = 1.0
+0:1/animation_frame_4/duration = 1.0
+0:1/animation_frame_5/duration = 1.0
+0:1/animation_frame_6/duration = 1.0
+0:1/animation_frame_7/duration = 1.0
+0:1/animation_frame_8/duration = 1.0
+0:1/animation_frame_9/duration = 1.0
+0:1/animation_frame_10/duration = 1.0
+0:1/animation_frame_11/duration = 1.0
+0:1/animation_frame_12/duration = 1.0
+0:1/animation_frame_13/duration = 1.0
+0:1/animation_frame_14/duration = 1.0
+0:1/animation_frame_15/duration = 1.0
+0:1/0 = 0
+0:2/animation_speed = 15.0
+0:2/animation_frame_0/duration = 1.0
+0:2/animation_frame_1/duration = 1.0
+0:2/animation_frame_2/duration = 1.0
+0:2/animation_frame_3/duration = 1.0
+0:2/animation_frame_4/duration = 1.0
+0:2/animation_frame_5/duration = 1.0
+0:2/animation_frame_6/duration = 1.0
+0:2/animation_frame_7/duration = 1.0
+0:2/animation_frame_8/duration = 1.0
+0:2/animation_frame_9/duration = 1.0
+0:2/animation_frame_10/duration = 1.0
+0:2/animation_frame_11/duration = 1.0
+0:2/animation_frame_12/duration = 1.0
+0:2/animation_frame_13/duration = 1.0
+0:2/animation_frame_14/duration = 1.0
+0:2/animation_frame_15/duration = 1.0
+0:2/0 = 0
+0:3/animation_speed = 15.0
+0:3/animation_frame_0/duration = 1.0
+0:3/animation_frame_1/duration = 1.0
+0:3/animation_frame_2/duration = 1.0
+0:3/animation_frame_3/duration = 1.0
+0:3/animation_frame_4/duration = 1.0
+0:3/animation_frame_5/duration = 1.0
+0:3/animation_frame_6/duration = 1.0
+0:3/animation_frame_7/duration = 1.0
+0:3/animation_frame_8/duration = 1.0
+0:3/animation_frame_9/duration = 1.0
+0:3/animation_frame_10/duration = 1.0
+0:3/animation_frame_11/duration = 1.0
+0:3/animation_frame_12/duration = 1.0
+0:3/animation_frame_13/duration = 1.0
+0:3/animation_frame_14/duration = 1.0
+0:3/animation_frame_15/duration = 1.0
+0:3/0 = 0
+0:4/animation_speed = 15.0
+0:4/animation_frame_0/duration = 1.0
+0:4/animation_frame_1/duration = 1.0
+0:4/animation_frame_2/duration = 1.0
+0:4/animation_frame_3/duration = 1.0
+0:4/animation_frame_4/duration = 1.0
+0:4/animation_frame_5/duration = 1.0
+0:4/animation_frame_6/duration = 1.0
+0:4/animation_frame_7/duration = 1.0
+0:4/animation_frame_8/duration = 1.0
+0:4/animation_frame_9/duration = 1.0
+0:4/animation_frame_10/duration = 1.0
+0:4/animation_frame_11/duration = 1.0
+0:4/animation_frame_12/duration = 1.0
+0:4/animation_frame_13/duration = 1.0
+0:4/animation_frame_14/duration = 1.0
+0:4/animation_frame_15/duration = 1.0
+0:4/0 = 0
+0:5/animation_speed = 15.0
+0:5/animation_frame_0/duration = 1.0
+0:5/animation_frame_1/duration = 1.0
+0:5/animation_frame_2/duration = 1.0
+0:5/animation_frame_3/duration = 1.0
+0:5/animation_frame_4/duration = 1.0
+0:5/animation_frame_5/duration = 1.0
+0:5/animation_frame_6/duration = 1.0
+0:5/animation_frame_7/duration = 1.0
+0:5/animation_frame_8/duration = 1.0
+0:5/animation_frame_9/duration = 1.0
+0:5/animation_frame_10/duration = 1.0
+0:5/animation_frame_11/duration = 1.0
+0:5/animation_frame_12/duration = 1.0
+0:5/animation_frame_13/duration = 1.0
+0:5/animation_frame_14/duration = 1.0
+0:5/animation_frame_15/duration = 1.0
+0:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3smsa"]
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.63798076, 0.20200059, 0.35679367, 1)
+sources/0 = SubResource("TileSetAtlasSource_fkybt")
+
 [node name="Player" type="CharacterBody2D" unique_id=1183679640]
+collision_layer = 2
 script = ExtResource("1_cvnsp")
+speed = null
+throw_force = null
+dash_speed = null
+dash_duration = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1281358882]
 sprite_frames = SubResource("SpriteFrames_8vwt4")
-autoplay = "default"
-frame_progress = 0.56086403
+animation = &"idle_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1729450135]
-position = Vector2(0, 7)
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_soorf")
 
 [node name="HoldPoint" type="Marker2D" parent="." unique_id=1596924569]
 position = Vector2(16, 0)
 
 [node name="PickupZone" type="Area2D" parent="." unique_id=1928609557]
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupZone" unique_id=713539809]
 shape = SubResource("CircleShape2D_soorf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1560579734]
+zoom = Vector2(3, 3)
+position_smoothing_speed = 7.0
+
+[node name="DashBarTileMapLayer" type="TileMapLayer" parent="." unique_id=1728466829]
+material = SubResource("ShaderMaterial_6t5aa")
+position = Vector2(8, 8)
+tile_map_data = PackedByteArray(0, 0, 244, 255, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 245, 255, 5, 0, 0, 0, 0, 0, 4, 0, 0, 0, 246, 255, 5, 0, 0, 0, 0, 0, 4, 0, 0, 0, 247, 255, 5, 0, 0, 0, 0, 0, 4, 0, 0, 0, 248, 255, 5, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_3smsa")
+script = ExtResource("5_fkybt")
+
+[node name="ColorRect" type="ColorRect" parent="DashBarTileMapLayer" unique_id=567770447]
+offset_left = -112.0
+offset_top = 85.0
+offset_right = -111.0
+offset_bottom = 91.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="DashBarTileMapLayer" unique_id=146912934]
+offset_left = -193.0
+offset_top = 85.0
+offset_right = -192.0
+offset_bottom = 91.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
