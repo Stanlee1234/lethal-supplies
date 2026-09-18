@@ -8,4 +8,5 @@ script = ExtResource("1_jicek")
 item_name = "Box"
 texture = ExtResource("2_1v73x")
 weight_tier = 2.0
+collision_size = Vector2(12, 16)
 metadata/_custom_type_script = "uid://skughv1fccfk"
